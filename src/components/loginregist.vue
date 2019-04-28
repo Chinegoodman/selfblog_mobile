@@ -99,18 +99,15 @@
 <style scoped lang="less">
     @import "./../assets/common";
     .loginregistbox{
-
         /*loginregist参照的定位对象为wrap必要时需要给wrap设置relative*/
         .loginregist{
-            /*width: 30vw;*/
-            /*min-width: 450px;*/
-            /*height: 30vw;*/
-            /*min-height: 450px;*/
-            height: 450px;
-            width: 450px;
+            /*height: 450px;*/
+            /*width: 450px;*/
+            height: 23em;
+            width: 23em;
             border-radius: 50%;
             overflow: hidden;
-            position: absolute;
+            position: fixed;
             left: 50%;
             top: 50%;
             z-index: 1001;
@@ -129,7 +126,7 @@
                 transform: translate(-50%,-50%);
                 box-sizing: border-box;
 
-                padding-top: 7.88em;
+                padding-top: 4em;
                 h3{
                     display: block;
                     margin-bottom: 1em;

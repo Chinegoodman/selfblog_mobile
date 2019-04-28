@@ -144,28 +144,28 @@
 <style scoped lang="less">
     @import "./../assets/common";
     .makenewcontent{
-        width:@rightwidth;
+        width:94%;
         font-size: @fontsizedefault;
         background-color: @white;
         border: 1px solid @bordercolor;
-        padding: 1.5em;
+        padding: 0.5em;
         border-radius: 0.4em;
         margin: 0 auto ;
         box-sizing: border-box;
         .submitbox{
             box-sizing: border-box;
-            padding: 1.2em 2em;
+            padding: 0.5em;
             width: 100%;
             background-color: @white;
             border: 1px solid @bordercolor;
-            border-radius: 0.4em;
+            border-radius: 0.2em;
             margin: 0 auto;
             .title{
                 text-align: left;
                 font-size: @fontsizedefault;
                 font-weight: 600;
                 text-decoration: underline;
-                margin-bottom: 1em;
+                margin-bottom: 0.5em;
                 cursor: pointer;
                 line-height: 1.2em;
                 span{
@@ -227,7 +227,7 @@
                 }
             }
             .author{
-                padding-right: 100px;
+                /*padding-right: 100px;*/
                 text-align: right;
                 input{
                     outline: none;

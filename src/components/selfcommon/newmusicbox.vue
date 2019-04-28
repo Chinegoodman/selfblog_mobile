@@ -152,10 +152,11 @@
         audio.musicaudio{
             display: none;
         }
-        font-size: 15px;
+        /*font-size: 15px;*/
+        font-size: 12px;
         position: fixed;
         left: 0;
-        bottom: 135px;
+        bottom: 5.2em;
         z-index: 100;
         padding: 0.4em;
         border: 1px solid @bordercolor;

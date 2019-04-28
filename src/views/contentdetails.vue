@@ -43,24 +43,24 @@
 <style scoped lang="less">
     @import "./../assets/common";
     .contentdetails{
-        width:@rightwidth;
+        width:94%;
         font-size: @fontsizedefault;
         background-color: @white;
         border: 1px solid @bordercolor;
-        padding: 1.5em;
+        padding: 1em;
         border-radius: 0.4em;
         margin: 0 auto ;
         box-sizing: border-box;
         .contenli{
             box-sizing: border-box;
-            padding: 1.2em 2em;
+            padding: 1em;
             width: 100%;
             background-color: @white;
             border: 1px solid @bordercolor;
             border-radius: 0.4em;
-            margin: 0 auto 2em;
+            margin: 0 auto;
             .title{
-                text-align: left;
+                text-align: center;
                 font-size: @fontsizedefault;
                 font-weight: 600;
                 text-decoration: underline;
@@ -70,7 +70,7 @@
             ul{
                 li{
                     float: left;
-                    margin-right: 1.5em;
+                    margin-right: 0.5em;
                     font-size: @fontsizesmall;
                     font-style: italic;
                     border: 1px dashed @bordercolor;
@@ -84,7 +84,8 @@
                 width: 100%;
                 min-height: 4em;
                 border: 1px solid @bordercolor;
-                padding: 1em;
+                padding: 0.5em;
+                box-sizing: border-box;
                 border-radius: 0.3em;
                 text-align: left;
                 margin-top: 0.7em;
@@ -98,7 +99,6 @@
             .author{
                 margin-top: 0.4em;
                 text-align: right;
-                width: 95%;
                 span{
                     font-style: italic;
                     font-weight: 600;

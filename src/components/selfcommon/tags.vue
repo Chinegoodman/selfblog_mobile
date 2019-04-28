@@ -50,11 +50,13 @@
         border-radius: 2px;
         display: flex;
         justify-content: flex-start;
+        overflow: scroll;
         &>input{
             outline: none;
             border-color:@bordercolor;
             margin-right: 0.4em;
-            padding: 0 4px;
+            padding: 0 0.4em;
+            width: 7em;
         }
         &>i.addtagbtn{
             font-size: 12px;

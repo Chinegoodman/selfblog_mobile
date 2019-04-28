@@ -1,21 +1,21 @@
 <template>
     <div class="wrap">
-        <div class="left" :class="{widthzero:!leftstatus}" @mouseover="lefthidebgnstatus=true" @mouseout="lefthidebgnstatus=false">
+        <div class="top">
             <showtime></showtime>
             <usefulwebsite></usefulwebsite>
-            <otherwebsite></otherwebsite>
 
-            <div v-if="!leftstatus" class="leftshowbgn" @click="leftstatus=!leftstatus"></div>
-            <div v-if="leftstatus" :class="{active:lefthidebgnstatus}" class="lefthidebgn" @click="leftstatus=!leftstatus"></div>
+            <div v-if="!topstatus" class="leftshowbgn" @click="topstatus=!topstatus"></div>
+            <div v-if="topstatus" :class="{active:toptbnstatus}" class="lefthidebgn" @click="topstatus=!topstatus"></div>
         </div>
-        <div class="right" :class="{widthbigger:!leftstatus}">
-            <div class="right_toptitle">{{right_toptitle}}</div>
-            <div class="rightwrap">
-                <div class="righthiddenscroll">
+        <div class="contentbox">
+            <div class="content_title">{{content_title}}</div>
+            <div class="content">
+                <div class="content_hiddenscroll">
                     <router-view></router-view>
                 </div>
             </div>
         </div>
+        <otherwebsite></otherwebsite>
         <div style="clear: both;"></div>
         <!-- 音乐播放模块-->
         <newmusicbox></newmusicbox>
@@ -49,9 +49,10 @@
         components:{homeordistribution,feedback,showtime,usefulwebsite,newmusicbox,otherwebsite,personbtnbox,loginregist},
         data(){
             return{
-                leftstatus:true,
-                lefthidebgnstatus:false,
-                right_toptitle:'你好,站点部分接口有待调试中,可以听一下我收藏的歌曲啊',
+                topstatus:true,
+                toptbnstatus:false,
+                // right_toptitle:'你好,站点部分接口有待调试中,可以听一下我收藏的歌曲啊',
+                content_title:'站点接口调试中,听一下我收藏的歌曲吧',
             }
         },
         methods:{
@@ -74,8 +75,33 @@
     .wrap{
         height: 100%;
         width: 100%;
-        overflow: hidden;
-        .left{
+        .top{
+
+        }
+        .contentbox{
+            .content_title{
+                font-weight: 500;
+                background-color: @white;
+                border: 1px solid @bordercolor;
+                width: 94%;
+                padding: 0.5em 0;
+                border-radius: 0.4em;
+                margin: 0.5em auto;
+                line-height: 2em;
+            }
+            .content{
+                margin-bottom: calc( 4em + 1em );
+                max-height: calc( 100vh - 4em - 1px );
+                overflow: hidden;
+                .content_hiddenscroll{
+                    /*width: calc( 100% + 7px);*/
+                    width: 100%;
+                    max-height: calc( 100vh - 4em - 1px );
+                    overflow: scroll;
+                }
+            }
+        }
+        /*.left{
             width: 30%;
             box-sizing: border-box;
             border-right: 1px solid @bordercolor;
@@ -83,7 +109,7 @@
             float: left;
             position: relative;
             &.widthzero{
-                /*width: 0;*/
+                !*width: 0;*!
                 margin-left:-30%;
             }
 
@@ -135,7 +161,7 @@
             .rightwrap{
                 width: 100%;
                 height: calc(100% - 62px - 56px);
-                /*background-color: #ccc;*/
+                !*background-color: #ccc;*!
                 overflow: hidden;
 
                 .righthiddenscroll{
@@ -147,6 +173,6 @@
                     overflow-y: scroll;
                 }
             }
-        }
+        }*/
     }
 </style>

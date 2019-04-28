@@ -51,7 +51,7 @@
                         return '五';
                     case 6:
                         return '六';
-                    case 7:
+                    case 0:
                         return '日';
                 }
             },
@@ -78,20 +78,24 @@
 <style scoped lang="less">
     @import "./../../assets/common";
     .showtime{
-        padding: 15px 15px;
+        padding: 1em;
         border: 1px solid @bordercolor;
         /*width: 300px;*/
         width: 94%;
         box-sizing: border-box;
-        margin: 35px auto;
-        border-radius: 5px;
+        margin: 0.5em auto;
+        border-radius: 1em;
         background: @white;
+        text-align: left;
         h3>span{
             color: @blue;
-            font-size: @fontsizebig;
+            font-size: 1.5em;
         }
         h3,p{
-            margin-bottom: 5px;
+            margin-bottom: 0.02rem;
+        }
+        &>h3,&>p,&>span{
+            padding-left: 0.3rem;
         }
     }
 </style>

@@ -8,7 +8,7 @@
             <div class="shortcontent">
                 <span @click="godetail(item.id)">简介:{{item.shortcontent}}</span>
             </div>
-            <div class="author">by: <span>{{item.author}}</span></div>
+            <div class="author"><span>by: </span><span>{{item.author}}</span></div>
         </div>
         <psf-changepage class="zidingyiclassname" @changenumber="getchangenumber" :pagesallnumber="pagesall_number"></psf-changepage>
 
@@ -59,34 +59,34 @@
 <style scoped lang="less">
     @import "./../assets/common";
     .contents{
-        width:@rightwidth;
+        width:94%;
         font-size: @fontsizedefault;
         background-color: @white;
         border: 1px solid @bordercolor;
-        padding: 1.5em;
+        padding: 1em;
         border-radius: 0.4em;
         margin: 0 auto ;
         box-sizing: border-box;
         .contenli{
             box-sizing: border-box;
-            padding: 1.2em 2em;
+            padding: 1em 0.5em;
             width: 100%;
             background-color: @white;
             border: 1px solid @bordercolor;
             border-radius: 0.4em;
-            margin: 0 auto 2em;
+            margin: 0 auto 1.2em;
             .title{
-                text-align: left;
+                text-align: center;
                 font-size: @fontsizedefault;
                 font-weight: 600;
                 text-decoration: underline;
-                margin-bottom: 1em;
+                margin-bottom: 0.8em;
                 cursor: pointer;
             }
             ul{
                 li{
                     float: left;
-                    margin-right: 1.5em;
+                    margin-right: 0.5em;
                     font-size: @fontsizesmall;
                     font-style: italic;
                     border: 1px dashed @bordercolor;
@@ -97,8 +97,9 @@
                 }
             }
             .shortcontent{
-                width: 95%;
+                box-sizing: border-box;
                 min-height: 4em;
+                line-height: 1.5em;
                 border: 1px solid @bordercolor;
                 padding: 1em;
                 border-radius: 0.3em;
@@ -112,9 +113,13 @@
                 }
             }
             .author{
+                line-height: 1.5em;
                 text-align: right;
-                width: 95%;
                 span{
+                    display: inline-block;
+                    line-height: 2em;
+                }
+                span:last-child{
                     font-style: italic;
                     font-weight: 600;
                     text-decoration: underline;

@@ -32,14 +32,15 @@
     .homeordistributionbox{
         .homeordistribution{
             position: fixed;
-            right: -50px;
+            right: -0.1rem;
             top: 30%;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            width: 5em;
+            padding-left: 0.5em;
+            height: 3em;
+            border-radius: 0.04rem;
             background: @hoverbgcolorr;
-            line-height: 100px;
-            text-align: center;
+            line-height: 3em;
+            text-align: left;
             transition: all linear @transtime;
             &:hover{
                 right:3px;

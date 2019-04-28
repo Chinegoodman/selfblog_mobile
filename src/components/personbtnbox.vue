@@ -1,5 +1,5 @@
 <template>
-    <div class="personbtnbox" @mouseover="mouseover()" @mouseout="mouseout()">
+    <div class="personbtnbox" @click="mouseover()" @mouseout="mouseout()">
         <p v-if="!iflogin&&!ismouseover">{{userdata.nickname}}</p>
         <p v-else-if="iflogin&&!ismouseover">{{userdata.nickname}}</p>
 
@@ -71,21 +71,20 @@
 
 <style scoped lang="less">
     @import "./../assets/common";
-    @btnwidthheight:40px;
+    @btnwidthheight:5.1em;
     .personbtnbox{
         background: @hoverbgcolorr;
 
         position: fixed;
-        right: 5px;
-        top: 5px;
+        right: 1.1em;
+        top: 1.1em;
         width: @btnwidthheight;
         height: @btnwidthheight;
         border-radius: 50%;
         overflow: hidden;
         p{
             text-align: center;
-            line-height: 40px;
-            font-size: @fontsizesmall;
+            line-height: @btnwidthheight;
             color: #fff;
         }
         div.btn{

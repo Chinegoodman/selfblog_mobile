@@ -13,7 +13,7 @@
             <li @click="changeclick(activepagenumber_03)" v-if="activepagenumber_03!=-1">{{activepagenumber_03}}</li>
             <li @click="changeclick(activepagenumber_04)" v-if="activepagenumber_04!=-1">{{activepagenumber_04}}</li>
             <li v-if="appendpointstatus">...</li>
-            <li @click="golastpage">最后一页</li>
+            <li @click="golastpage">尾页</li>
 <!--            <div style="clear:both;"></div>-->
         </ul>
         <p>共{{pagesallnumber}}页</p>
@@ -450,21 +450,25 @@
 
 <style scoped>
     .psf-changepagebox{
-        font-size: 14px;
-        padding-left: 10em;
+        font-size: 12px;
+        padding-left: 0em;
     }
     .psf-changpagecontainer{
         list-style: none;
         margin: 0 0 1em;
         padding: 0;
         /*display: inline-block;*/
-        float: left;
+        /*float: left;*/
+        display: flex;
+        justify-content: space-around;
 
     }
     .psf-changpagecontainer>li{
         float: left;
         line-height: 1.6em;
+        height: 1.6em;
         padding: 0 1em;
+        overflow: hidden;
         background-color: rgba(0,0,0,.0975);
         margin-right:0.4em;
         border-radius: 0.4em;
@@ -486,6 +490,6 @@
         line-height: 1.6em;
         padding: 0 0.5em;
         border-radius: 0.4em;
-        float: left;
+        /*float: left;*/
     }
 </style>

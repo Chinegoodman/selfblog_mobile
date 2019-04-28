@@ -37,25 +37,27 @@
     @import "./../assets/common";
     .otherwebsite{
         padding: 0;
-        border: 1px solid @bordercolor;
+        border: 1px solid rgba(0, 0, 0, 0.0975);
+        border-bottom: none;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
         width: 94%;
-        border-radius: 5px;
-        background: @white;
-        position: absolute;
-        bottom: 5px;
-        left: 0;
-        transform: translateX((3/94)*100%);
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
         .otherwebsitetitle{
             float: left;
             /*width: 1.3em;*/
-            padding: 0.3em;
+            padding: 0 0.3em;
             border-right: 1px solid @bordercolor;
             color: @linkcolor;
-            line-height: 3em;
+            line-height: 4em;
         }
         .linksbox{
             padding-left: 2.1em;
-            min-height: 3.6em;
+            min-height: 4em;
             display: flex;
             justify-content: space-around;
             align-items: center;
