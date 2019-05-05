@@ -20,7 +20,7 @@
         data(){
             return{
                 websitesdata:[],
-                usefulwebsitestatus:false,
+                usefulwebsitestatus:true,
             }
         },
         methods:{
