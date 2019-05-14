@@ -16,6 +16,7 @@
                 <div class="registbox" v-if="rightstatus">
                     <h3>用户注册</h3>
                     <div class="clearfloat"><span>注册邮箱:</span><input type="email"></div>
+                    <div class="clearfloat" style="position: relative;"><span>验证码:</span><input type="text"><span style="position: absolute;right: 0;top: 0;margin: 0;width: auto;cursor: pointer;background-color: #ccc;color: #fff;padding: 0 0.4em;">获取验证码</span></div>
                     <div class="clearfloat"><span>密码:</span><input type="password"></div>
                     <hr style="visibility: hidden;">
                     <div class="submitbtn" @click.stop="regist()">注册</div>
@@ -42,6 +43,7 @@
             }
         },
         methods:{
+            // todo: 此处还有接口需要调试,上边参照pc端添加了验证码获取的块
             login(){
                 // let loginstatus = confirm('模拟登录成功?')
                 // if(loginstatus){

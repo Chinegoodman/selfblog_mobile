@@ -14,7 +14,8 @@
   import {remset} from './usefuljs/remset';
   export default {
     beforeCreate() {
-      checkdevice();
+      // todo:放到正式服务器之前,此处都备注掉,避免页面检测并跳转影响调试
+      // checkdevice();
       remset(375);
     }
   }
